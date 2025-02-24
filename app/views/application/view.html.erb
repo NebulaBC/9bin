@@ -1,0 +1,25 @@
+<div class="codeBlock"><% @contents.split("\n").each do |line| %><pre><code><%= h line %></code></pre><% end %></div>
+<style>
+    .codeBlock {
+    counter-reset: line;
+    }
+
+    code {
+    counter-increment: line;
+    }
+
+    code::before {
+    content: counter(line);
+    display: inline-block;
+    width: 0.8em;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888;
+    -webkit-user-select: none;
+    }
+</style>
+<script>
+    document.getElementById("raw").addEventListener("click", function() {
+        window.location.replace("/raw/<%= @slug.downcase %>");
+    });
+</script>
