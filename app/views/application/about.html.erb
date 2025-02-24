@@ -1,0 +1,35 @@
+<div class="codeBlock">
+<pre><code># 9bin</code></pre>
+<code>This is my take on Hastebin. I've been a big user of Hastebin for years, and was not happy with the Toptal buyout, and more recently have been experiencing instability with my personal instance of Hastebin.</code><br>
+<code>9bin is compatible with programs made for Hastebin as far as I've tested. Feel free to use 9bin to share your code, <a href="https://github.com/NebulaBC/9bin">or run your own instance!</a> 9bin is fully written in Ruby.</code><br>
+<code></code>
+<pre><code># Duration</code></pre>
+<code>Pastes usually exist for 30 days (2592000s in Redis), but may be removed earlier.</code><br>
+<code></code>
+<pre><code># Privacy</code></pre>
+<code>Pasted text is fully un-encrypted and is exposed to the web. Use your common sense, don't post sensitive data.</code><br>
+<code></code>
+<pre><code># Source code</code></pre>
+<code><a href="https://github.com/NebulaBC/9bin">9bin is fully open source and you can run your own.</a> Feel free to modify to your liking within the GPLv3 terms, I will also review worthwhile pull requests.</code>
+</div>
+<script>hljs.highlightAll();</script>
+
+<style>
+    .codeBlock {
+    counter-reset: line;
+    }
+
+    code {
+    counter-increment: line;
+    }
+
+    code::before {
+    content: counter(line);
+    display: inline-block;
+    width: 0.8em;
+    padding: 0 .5em;
+    margin-right: .5em;
+    color: #888;
+    -webkit-user-select: none;
+    }
+</style>

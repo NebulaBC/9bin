@@ -7,6 +7,9 @@ class ApplicationController < ActionController::Base
     @uuid = helpers.generate_unique_key()
   end
 
+  def about
+  end
+
   def view
     key = params[:slug].upcase
     if !REDIS.exists?(key)

@@ -24,6 +24,18 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
             submitForm(event);
         }
+        if (event.ctrlKey && event.key === "n") {
+            event.preventDefault();
+            window.location.replace("/");
+        }
+        if (event.keyCode === 9) {
+            event.preventDefault();
+            document.execCommand("insertText", false, "\t");
+        }
+    });
+
+    document.getElementById("new").addEventListener("click", function() {
+        window.location.replace("/");
     });
 
     document.getElementById("submit").addEventListener("click", submitForm);

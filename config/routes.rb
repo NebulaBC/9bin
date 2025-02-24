@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   # root "posts#index"
   Rails.application.routes.draw do
     post "/documents", to: "application#create"
+    get "/about", to: "application#about"
     get "/raw/:slug", to: "application#raw"
     get "/:slug", to: "application#view"
   end
