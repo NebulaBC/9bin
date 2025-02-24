@@ -38,6 +38,7 @@ class ApplicationController < ActionController::Base
     end
     @slug = helpers.generate_unique_key()
     REDIS.set(@slug, body)
+    REDIS.expire(@slug, 2592000)
     render json: { key: @slug.downcase }, status: :created
   end
 
