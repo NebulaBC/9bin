@@ -375,6 +375,7 @@ DEPENDENCIES
   jbuilder
   kamal
   propshaft
+  psych
   puma (>= 5.0)
   rails (~> 8.0.1)
   rails_icons
