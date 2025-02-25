@@ -1,0 +1,12 @@
+services:
+  9bin:
+    build: .
+    ports:
+      - 7777:3000
+    links:
+      - "redis:db"
+    environment:
+      - RAILS_MASTER_KEY=<useless key here>
+    restart: on-failure
+  redis:
+    image: redis
