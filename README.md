@@ -1,5 +1,5 @@
 
-# This repo has been moved to SourceHut. https://git.sr.ht/~nebulabc/
+# This repo has been moved to SourceHut. https://git.sr.ht/~nebulabc/9bin/
 
 ---
 
